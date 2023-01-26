@@ -5,7 +5,7 @@ from fabric import task
 
 
 @task
-def pack(c):
+def do_pack(c):
     """Create a tar gzipped archive of the current directory."""
     c.run("touch holbertonwebapp.tar.gz")
     c.run("tar --exclude='*.tar.gz' -cvzf holbertonwebapp.tar.gz .")
@@ -24,3 +24,4 @@ def deploy(c):
 def clean(c):
     """Deletes holbertonwebapp.tar.gz on the local machine."""
     c.run("rm holbertonwebapp.tar.gz")
+
